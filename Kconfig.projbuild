@@ -1,0 +1,15 @@
+menu "Media Codec Configuration"
+    menu "Log"
+        config MEDIA_CODEC_LOG
+            bool "Log for all Media Codec"
+            default y
+        config MEDIA_CODEC_LOG_PRINTF
+            bool "Use \"printf\" as log function"
+            default y
+            depends on MEDIA_CODEC_LOG
+        config AUDIO_CODEC_LOG
+            bool "Log for Audio Codec"
+            default y
+            depends on MEDIA_CODEC_LOG
+    endmenu
+endmenu
